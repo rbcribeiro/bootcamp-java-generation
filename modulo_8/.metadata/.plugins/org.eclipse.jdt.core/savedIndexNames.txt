@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Renata\Desktop\2024\bootcamp_generation\modulo_8\.metadata\.plugins\org.eclipse.jdt.core
+1717014571.index
+1865797976.index
+3917591065.index
