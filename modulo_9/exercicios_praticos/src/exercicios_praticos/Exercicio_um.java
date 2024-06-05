@@ -18,11 +18,11 @@ public class Exercicio_um {
 		leia.close();
 
 		if (a + b > c) {
-			System.out.println("soma de A + B é maior que C.");
+			System.out.println("A soma de A + B é maior que C.");
 		} else if (a + b < c) {
-			System.out.println("soma de A + B é menor que C.");
+			System.out.println("A soma de A + B é menor que C.");
 		} else {
-			System.out.println("soma de A + B é igual a C.");
+			System.out.println("A soma de A + B é igual a C.");
 		}
 	}
 }

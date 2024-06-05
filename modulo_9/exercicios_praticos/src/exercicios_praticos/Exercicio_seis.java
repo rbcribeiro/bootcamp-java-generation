@@ -1,56 +1,62 @@
 package exercicios_praticos;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Exercicio_seis {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 
-		int codigoProduto, quantidade;
+		String nomeColaborador, cargo;
+		int codigoCargoColaborador;
+		double salario, novoSalario, reajuste;
 
-		System.out.println("Digite o código do produto (1 a 6):");
-		codigoProduto = leia.nextInt();
+		System.out.println("Digite o nome do Colaborador:");
+		nomeColaborador = leia.nextLine();
 
-		System.out.println("Digite a quantidade:");
-		quantidade = leia.nextInt();
+		System.out.println("Digite o código do Cargo do Colaborador (1 a 6):");
+		codigoCargoColaborador = leia.nextInt();
+
+		System.out.println("Digite o salário:");
+		salario = leia.nextFloat();
 		leia.close();
 
-		String nomeProduto = "";
-		double precoUnitario = 0.0;
-		switch (codigoProduto) {
+		cargo = "";
+
+		switch (codigoCargoColaborador) {
 		case 1:
-			nomeProduto = "Cachorro Quente";
-			precoUnitario = 10.00;
+			cargo = "Gerente";
+			reajuste = 0.10;
 			break;
 		case 2:
-			nomeProduto = "X-Salada";
-			precoUnitario = 15.00;
+			cargo = "Vendedor";
+			reajuste = 0.07;
 			break;
 		case 3:
-			nomeProduto = "X-Bacon";
-			precoUnitario = 18.00;
+			cargo = "Supervisor";
+			reajuste = 0.09;
 			break;
 		case 4:
-			nomeProduto = "Bauru";
-			precoUnitario = 12.00;
+			cargo = "Motorista";
+			reajuste = 0.06;
 			break;
 		case 5:
-			nomeProduto = "Refrigerante";
-			precoUnitario = 8.00;
+			cargo = "Estoquista";
+			reajuste = 0.05;
 			break;
 		case 6:
-			nomeProduto = "Suco de laranja";
-			precoUnitario = 13.00;
+			cargo = "Técnico de TI";
+			reajuste = 0.08;
 			break;
 		default:
-			System.out.println("Código de produto inválido!");
+			System.out.println("Código inválido!");
 			leia.close();
 			return;
 		}
 
-		double valorTotal = precoUnitario * quantidade;
+		novoSalario = salario + (reajuste * salario);
 
-		System.out.println("Produto: " + nomeProduto);
-		System.out.println("Valor total: R$ " + String.format("%.2f", valorTotal));
+        System.out.printf("Nome do colaborador: %s. Cargo: %s. Salário atualizado: %.2f%n",
+                nomeColaborador, cargo, novoSalario);
 	}
+
 }
