@@ -6,7 +6,7 @@ public class Exercicio_quatro {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		float n1, n2, n3, n4;
+		float n1, n2, n3, n4, diferenca;
 		
 		System.out.println("Informe o 1º valor:");
 		n1 = ler.nextFloat();
@@ -19,8 +19,10 @@ public class Exercicio_quatro {
 
 		System.out.println("Informe o 4º valor:");
 		n4 = ler.nextFloat();
+		
+		diferenca = ((n1*n2) - (n3*n4));
 	
-		System.out.printf("Diferença = %.1f", (n1*n2) - (n3*n4));
+		System.out.printf("Diferença = %.1f", diferenca);
 		ler.close();
 	}
 }
