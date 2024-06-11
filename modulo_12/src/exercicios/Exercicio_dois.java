@@ -7,9 +7,7 @@ public class Exercicio_dois {
 
 		Scanner leia = new Scanner(System.in);
 
-		ArrayList<Integer> numeros = new ArrayList<>();
-
-		numeros.addAll(Arrays.asList(2, 5, 1, 3, 4, 9, 7, 8, 10, 6));
+		ArrayList<Integer> numeros = new ArrayList<>(Arrays.asList(2, 5, 1, 3, 4, 9, 7, 8, 10, 6));
 
 		System.out.println("Digite um número inteiro: ");
 		int numeroDigitado = leia.nextInt();
